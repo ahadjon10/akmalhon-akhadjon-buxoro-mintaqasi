@@ -1,0 +1,45 @@
+.ui-selectmenu-button.ui-button {
+    max-width: 100%;
+}
+
+.ui-slider-horizontal {
+    height: 5px;
+}
+
+.ui-slider .ui-slider-handle {
+    width: 24px;
+    height: 24px;
+    border-radius: 100%;
+}
+
+.ui-slider-horizontal .ui-slider-handle {
+    top: -10px;
+    outline: none;
+}
+
+.ui-slider-range.ui-corner-all.ui-widget-header {
+    background: #367ac3;
+}
+
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default,
+.ui-button,
+html .ui-button.ui-state-disabled:hover,
+html .ui-button.ui-state-disabled:active {
+    background: white;
+    border: solid 1px #367ac3;
+}
+
+div#slider-range {
+    background: #e6e6e6;
+    border: 0;
+    border-radius: 0;
+}
+
+.ui-selectmenu-button.ui-button {
+    max-width: 100%;
+    border: solid 1px #cccccc;
+    padding: 10px 15px;
+    border-radius: 0;
+}

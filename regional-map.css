@@ -1,0 +1,158 @@
+h3.title2 {
+    font-size: 18px;
+    color: #1a1a1a;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.specialization-item {
+    padding-bottom: 30px;
+}
+
+.regional-map-intro {
+	padding-left: 135px;
+	padding-right: 135px;
+	margin-bottom: 60px;
+}
+
+.chart-title {
+	border-bottom: solid 1px #9ad0f5;
+	font-size: 28px;
+	padding: 20px 0;
+	margin-bottom: 30px;
+}
+
+.table-div {
+	border-top: solid 2px #9ad0f5;
+}
+
+.table-div-item {
+	padding: 22px 35px;
+	background: #f6fbff;
+	border-top: solid 1px #9ad0f5;
+}
+
+.table-div-item p {
+	margin-bottom: 20px;
+}
+
+.infrostructure .infrostructure-item {
+    text-align: center;
+}
+
+.infrostructure .thumb {
+	display: inline-block;
+	height: 90px;
+}
+
+.infrostructure .thumb:after {
+	display: inline-block;
+	vertical-align: middle;
+	width: 1px;
+	height: 100%;
+	content: "";
+}
+
+.infrostructure .thumb img {
+	max-width: calc( 100% - 6px );
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.infrostructure-item {
+	background: #e6e6e6;
+	padding: 35px;
+	height: 100%;
+}
+
+.infrostructure .title {
+	padding-top: 40px;
+	padding-bottom: 15px;
+}
+
+.infrostructure .title a {
+	color: #1a1a1a;
+    font-weight: bold;
+}
+
+.infrostructure .text p {
+	font-size: 14px;
+}
+
+.bar-items {
+	padding: 25px 0;
+}
+
+.bar-items > div {
+	display: inline-block;
+	vertical-align: middle;
+	color: #4f4f4f;
+	font-weight: 600;
+	cursor: pointer;
+	padding: 8px;
+}
+
+.bar-items > div:hover,
+.bar-items > div.active {
+	color: #3a71c1;
+}
+
+.map3-wrapper {
+    position: relative;
+}
+
+.map3__sidebar {
+    padding: 20px;
+    background: #ffffff;
+    z-index: 20;
+    height: 100%;
+    border: solid 2px #4a8cd3;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.map3__sidebar-item {
+    padding: 6px 0;
+    margin-bottom: 6px;
+    cursor: pointer;
+}
+
+.map3-item img {
+    display: block;
+}
+
+.map3__sidebar-item a {
+    font-weight: 500;
+    color: #08121a;
+    display: inline-block;
+}
+
+.map3__sidebar-item-select {
+    width: 17px;
+    height: 17px;
+    border: solid 1px #b3b3b3;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 8px;
+    margin-top: -5px;
+}
+
+.map3__sidebar-item.active .map3__sidebar-item-select {
+    border-color: #008cd7;
+    background-color: #008cd7;
+}
+
+.map3-item.main {
+    position: relative;
+}
+
+.map3-item.thumb {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+.map3-item.thumb.active {
+    display: block;
+}

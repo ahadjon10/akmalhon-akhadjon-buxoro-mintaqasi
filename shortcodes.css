@@ -1,0 +1,35 @@
+body div.su-spoiler {
+    margin-bottom: 0;
+}
+
+body.single div.su-spoiler-title {
+    line-height: 30px;
+    font-size: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 0;
+    padding-right: 25px;
+}
+
+body.single div.su-spoiler-style-default > .su-spoiler-title .su-spoiler-icon {
+    right: 0;
+    top: 22px;
+    left: auto;
+}
+
+.su-spoiler-style-default {
+    border-bottom: solid 1px #d2d1d1;
+}
+
+body.single.su-spoiler-style-default > .su-spoiler-content {
+    padding: 0;
+    padding-bottom: 15px;
+}
+
+.su-spoiler.has-scroll {
+    overflow-x: scroll;
+}
+
+.su-spoiler.has-scroll.su-spoiler-closed {
+    overflow-x: hidden;
+}

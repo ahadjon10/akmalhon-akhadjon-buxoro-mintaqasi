@@ -1,0 +1,270 @@
+$( function() {
+
+    $(".gallery").prev("style").remove();
+    $(".gallery br").remove();
+
+    $(".call").click(function () {
+        $(".poll-container").toggleClass('active');
+    })
+
+    $("body").click(function () {
+        $(".poll-container").removeClass('active');
+    })
+
+    $(".poll-container, .call").click(function (e) {
+        e.stopPropagation();
+    })
+
+    //$(".lang li.active").prependTo(".lang ul");
+
+    $(".map path, .map polygon").mouseenter(function(e){
+        mouseX = e.pageX;
+        mouseY = e.pageY;
+        el = $(this);
+        el.css({fill: "#fff"});
+        id = el.attr("id");
+        $("#region-title").html(id);
+        $("#region-title").css({'top':mouseY + 40,'left':mouseX + 40});
+        $("#region-title").show();
+    });
+
+    $(".map path, .map polygon").mouseout(function(e){
+        el.css({fill: "#d9f6f7"});
+        $("#region-title").hide();
+    });
+
+    $(".su-spoiler").each(function(){
+        el = $(this);
+        w = el.width();
+        table = el.find("table").width();
+        if(table > w) {
+            el.addClass("has-scroll");
+        }
+    });
+
+    /*
+     $(".bar-items > div:first").addClass("active");
+
+     $("canvas").hide();
+     $("#canvas15").show();
+
+     $(".bar-items > div").click(function(){
+     $(".bar-items > div").removeClass("active");
+     $(this).addClass("active");
+     val = $(this).data("val");
+     $("canvas").hide();
+     $("#canvas"+val).show();
+     });
+     */
+    $(".sidebar li a").each(function(){
+        el = $(this);
+        child = el.next("ul");
+        if(child.find("li").length > 1) {
+            el.addClass("has-child");
+        }
+    });
+
+    $(".header-nav").click(function(){
+        $(".site-map").show(400);
+        return false;
+    });
+
+    $(".close-site-map").click(function(){
+        $(".site-map").fadeOut(400);
+    });
+
+    $(".sidebar .sub-menu li a, .sidebar .current-menu-item > a").click(function(){
+        el = $(this);
+        child = el.next("ul");
+
+        if(child.find("li").length > 1) {
+            el.toggleClass("opened");
+            el.toggleClass("active");
+            child.slideToggle(400);
+            return false;
+        }
+
+    });
+
+    $(".breadcrumbs > span:last").remove();
+    $(".breadcrumbs > span:last").addClass("last");
+
+    /*$(".content-item-show-bio").click(function(){
+     $(this).next("div").slideToggle(333);
+     return false;
+     })*/
+
+    $(".content-item-tabs .content-item-tab").click(function(){
+        el = $(this);
+        index = el.index();
+        $(".content-item-tabs .content-item-tab").removeClass("active");
+        el.addClass("active");
+        el.parent("div:first").next(".content-item-tab-contents").find(".content-item-tab-content").removeClass("active");
+        el.parent("div:first").next(".content-item-tab-contents").find(".content-item-tab-content:eq("+index+")").addClass("active");
+    });
+
+    $('.carousel').owlCarousel({
+        loop:true,
+        margin:20,
+        autoplay:true,
+        autoplayTimeout:2500,
+        autoplayHoverPause:false,
+        nav:true,
+        navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
+        /*responsive:{
+         0:{
+         items:1
+         },
+         600:{
+         items:3
+         },
+         1000:{
+         items:4
+         }
+         }*/
+        items: 6,
+    })
+
+    $(".ratings").owlCarousel({
+        animateOut: 'fadeOut',
+        animateIn: 'fadeIn',
+        loop:false,
+        margin:20,
+        autoplay:false,
+        nav:false,
+        navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
+        items:1,
+        mouseDrag: false,
+        touchDrag: false
+    })
+
+    $(".banner-item").owlCarousel({
+        animateOut: 'fadeOut',
+        animateIn: 'fadeIn',
+        autoplay: true,
+        autoplayTimeout: 4000,
+        loop:true,
+        margin:20,
+        nav:false,
+        navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
+        items:1,
+        mouseDrag: false,
+        touchDrag: false
+    })
+
+    $(".bar-items > div:first").addClass("active");
+
+    $(".bar-items .bar-item").click(function(){
+        el = $(this);
+        el.parents(".bar-items").find(".bar-item").removeClass("active");
+        el.addClass("active");
+        carousel = el.parents(".bar-items:first").next(".owl-carousel");
+        i = el.index();
+        carousel.find(".owl-dot:eq("+i+")").trigger("click");
+    });
+
+    $(".current-menu-parent > a").addClass("opened active");
+
+    $(".tab:first").addClass("active");
+    $(".tab").click(function () {
+        el = $(this);
+        $(".tab").removeClass("active");
+        el.addClass("active");
+        id = el.data("id");
+        $(".tab-item-wrapper").hide();
+        $(".tab-item-wrapper[data-id='"+id+"']").show();
+    })
+
+    $(".search-item").click(function () {
+        $(".search-wrapper").show();
+        return false;
+    })
+
+    $(".close").click(function(){
+        $(this).parents(".show-up:first").hide();
+    });
+/*
+    $("polygon, path").click(function(){
+        if($(this).attr("id") == "Сурхандарьинская область") {
+            window.location.href = "http://invest.brand.uz/regional-map/surhandarinskaya-oblast/";
+        }
+    });
+
+    $("polygon, path").click(function(){
+        if($(this).attr("id") == "Каракалпакстан") {
+            window.location.href = "http://invest.brand.uz/regional-map/respublika-karakalpakstan/";
+        }
+    });
+
+    $("polygon, path").click(function(){
+        if($(this).attr("id") == "Самаркандская область") {
+            window.location.href = "http://invest.brand.uz/regional-map/samarkandskaya-oblast/";
+        }
+    });
+
+
+    $("polygon, path").click(function(){
+        if($(this).attr("id") == "Сырдарьинская область") {
+            window.location.href = "http://invest.brand.uz/regional-map/syrdarinskaya-oblast/";
+        }
+    });
+
+    $("polygon, path").click(function(){
+        if($(this).attr("id") == "Ташкентская область") {
+            window.location.href = "http://invest.brand.uz/regional-map/tashkentskaya-oblast/";
+        }
+    });
+
+    $("polygon, path").click(function(){
+        if($(this).attr("id") == "Ферганская область") {
+            window.location.href = "http://invest.brand.uz/regional-map/ferganskaya-oblast/";
+        }
+    });
+
+    $("polygon, path").click(function(){
+        if($(this).attr("id") == "Хорезмская область") {
+            window.location.href = "http://invest.brand.uz/regional-map/horezmskaya-oblast/";
+        }
+    });
+
+    $("polygon, path").click(function(){
+        if($(this).attr("id") == "Навоийская область") {
+            window.location.href = "http://invest.brand.uz/regional-map/navoijskaya-oblast/";
+        }
+    });
+
+    $("polygon, path").click(function(){
+        if($(this).attr("id") == "Кашкадарьинская область") {
+            window.location.href = "http://invest.brand.uz/regional-map/kashkadarinskaya-oblast/";
+        }
+    });
+
+    $("polygon, path").click(function(){
+        if($(this).attr("id") == "Джизакская область") {
+            window.location.href = " http://invest.brand.uz/regional-map/dzhizakskaya-oblast/";
+        }
+    });
+
+    $("polygon, path").click(function(){
+        if($(this).attr("id") == "Бухарская область") {
+            window.location.href = "http://invest.brand.uz/regional-map/buharskaya-oblast/";
+        }
+    });
+
+    $("polygon, path").click(function(){
+        if($(this).attr("id") == "Наманганская область") {
+            window.location.href = "http://invest.brand.uz/regional-map/namanganskaya-oblast/";
+        }
+    });
+
+    $("polygon, path").click(function(){
+        if($(this).attr("id") == "Андижанская область") {
+            window.location.href = "http://invest.brand.uz/regional-map/andijan/";
+        }
+    });
+    */
+    $("polygon, path").click(function(){
+        window.location.href = $(this).attr("post-href");
+    });
+
+} );
