@@ -1,0 +1,1 @@
+# akmalhon-akhadjon-buxoro-mintaqasi
