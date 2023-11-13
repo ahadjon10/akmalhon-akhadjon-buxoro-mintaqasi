@@ -1,214 +1,27 @@
 <!DOCTYPE html>
 <!-- saved from url=(0056)https://invest.gov.uz/uz/regional-map/buharskaya-oblast/ -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     
-<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-    <!-- <meta property="og:title"         content="Инвестиционный портал Узбекистана" />
-    <meta property="og:description"   content="Инвестиционная деятельность в Узбекистане." />
-    <meta property="og:image"         content="https://invest.gov.uz/wp-content/themes/uzafiimages/share.png" /> -->
+        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="invest.gov.uz_files/fontawesome-all.css">
+    <link rel="stylesheet" href="invest.gov.uz_files/bootstrap-grid.css">
+    <link rel="stylesheet" href="invest.gov.uz_files/style.css">
+<title>Buxoro mintaqasi</title>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" sizes="32x32" href="https://invest.gov.uz/wp-content/themes/uzafi/favicon.png">
-    <link rel="stylesheet" href="./invest.gov.uz_files/fontawesome-all.css">
-    <link rel="stylesheet" href="./invest.gov.uz_files/bootstrap-grid.css">
-    <link rel="stylesheet" href="./invest.gov.uz_files/fancybox.css">
-    <link rel="stylesheet" href="./invest.gov.uz_files/style.css">
-    <link rel="stylesheet" href="./invest.gov.uz_files/jquery-ui.css">
-    <link rel="stylesheet" href="./invest.gov.uz_files/ui.css">
-    <link rel="stylesheet" href="./invest.gov.uz_files/searchform.css">
-    <link rel="stylesheet" href="./invest.gov.uz_files/shortcodes.css">
-    <link rel="stylesheet" href="./invest.gov.uz_files/wp.css">
-    <link rel="stylesheet" href="./invest.gov.uz_files/map.css">
-    <link rel="stylesheet" href="./invest.gov.uz_files/social.css">
-    <link rel="stylesheet" href="./invest.gov.uz_files/gallery.css">
-    <link rel="stylesheet" href="./invest.gov.uz_files/regional-map.css">
-    <link rel="stylesheet" href="./invest.gov.uz_files/media.css">
+ 
 
-    <link rel="stylesheet" href="./invest.gov.uz_files/animate.css">
-    <link href="./invest.gov.uz_files/aos.css" rel="stylesheet">
-
-    <link rel="stylesheet" href="./invest.gov.uz_files/owl.carousel.css">
-
-    <script async="" src="./invest.gov.uz_files/client.js.download"></script><script async="" src="./invest.gov.uz_files/tag.js.download"></script><script type="text/javascript" async="" src="./invest.gov.uz_files/recaptcha__en.js.download" crossorigin="anonymous" integrity="sha384-+EucQLX9FjQkBnp1US+TPO2CzxNKzs/l+WSpHcJEldNETFzQEp0i7r+cEaAMWcUk"></script><script type="text/javascript" src="./invest.gov.uz_files/jquery.js.download"></script>
-    <script type="text/javascript" src="./invest.gov.uz_files/owl.carousel.js.download"></script>
-    <script src="./invest.gov.uz_files/jquery-ui.js.download"></script>
-    <script src="./invest.gov.uz_files/moment.min.js.download"></script>
-
-    <script type="text/javascript" src="./invest.gov.uz_files/Chart.js.download"></script><style type="text/css">/* Chart.js */
+    <script type="text/javascript" src="invest.gov.uz_files/Chart.js.download"></script><style type="text/css">/* Chart.js */
 @-webkit-keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}@keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}.chartjs-render-monitor{-webkit-animation:chartjs-render-animation 0.001s;animation:chartjs-render-animation 0.001s;}</style>
-    <script type="text/javascript" src="./invest.gov.uz_files/jquery.animateNumber.js.download"></script>
+    
+    <script type="text/javascript" src="invest.gov.uz_files/utils.js.download"></script>
+    <script type="text/javascript" src="invest.gov.uz_files/wow.min.js.download"></script>
 
-    <script type="text/javascript" src="./invest.gov.uz_files/utils.js.download"></script>
-    <script type="text/javascript" src="./invest.gov.uz_files/wow.min.js.download"></script>
-    <script type="text/javascript" src="./invest.gov.uz_files/jquery.mask.min.js.download"></script>
-    <script src="./invest.gov.uz_files/aos.js.download"></script>
-
-    <script>
-        $(document).ready(function () {
-            //new WOW().init();
-            AOS.init();
-        });
-    </script>
-
-    <script src="./invest.gov.uz_files/numeral.min.js.download"></script>
-
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $(window).scroll(function () {
-                //$(window).scrollTop() + 500 > $(".main-characteristics").offset().top ? $('.row1').addClass('active') : false;
-                //$(window).scrollTop() > $(".main-characteristics").offset().top ? $('.row2').addClass('active') : false;
-            })
-            $(".get_more").click(function () {
-                $(".additional_filter").toggleClass("active");
-            })
-            $(".call-container #searchsubmit").click(function () {
-                $(".call-filter-container .col-lg-3.call-item-term").addClass('hidden');
-                v = $("#filter_call").val().toLowerCase();
-                $(".call-filter-container .col-lg-3.call-item-post").each(function () {
-                    el = $(this);
-                    text = el.find(".call-title a").text().toLowerCase();
-                    if (text.match(v)) {
-                        el.removeClass('hidden');
-                    }else{
-                        el.addClass('hidden');
-                    }
-                });
-
-                if($('.additional_filter').is(':visible')) {
-
-                    industry = $("select[name='industry'] option:selected").val();
-                    organization = $("select[name='organization'] option:selected").val();
-
-
-                    if(industry != "") {
-                        $(".call-filter-container .col-lg-3.call-item-post").each(function () {
-                            el = $(this);
-                            if (el.data('s') == industry) {
-                                el.removeClass('hidden');
-                            }else{
-                                el.addClass("hidden");
-                            }
-                        });
-                    }
-
-
-                    if(organization != "") {
-                        $(".call-filter-container .col-lg-3.call-item-post").each(function () {
-                            el = $(this);
-                            if (el.data('p') == organization) {
-                                el.removeClass('hidden');
-                            }else{
-                                el.addClass("hidden");
-                            }
-                        })
-                    }
-                    /*
-                    if(industry != "" && organization != "") {
-                        $(".call-filter-container .col-lg-3.call-item-post").each(function () {
-                            el = $(this);
-                            if (el.data('s') == industry && el.data('p') == organization) {
-                                el.removeClass('hidden');
-                            }else{
-                                el.addClass("hidden");
-                            }
-                        });
-                    }
-                    */
-                    if($(".col-lg-3.call-item-post.hidden").length != $(".col-lg-3.call-item-post").length) {
-                        $(".call-filter-container .col-lg-3.call-item-term").addClass('hidden');
-                    }else{
-                        $(".call-filter-container .col-lg-3.call-item-term").removeClass('hidden');
-                    }
-
-                    text = $("#filter_call").val().toLowerCase();
-                    if(text == "" && organization == "" && industry == "") {
-                        $(".call-filter-container .col-lg-3.call-item-term").removeClass('hidden');
-                        $(".call-filter-container .col-lg-3.call-item-post").addClass('hidden');
-                    }
-
-                }
-
-                return false;
-            })
-        })
-    </script>
-
-    <script type="text/javascript" src="./invest.gov.uz_files/scripts.js.download"></script>
-    <script type="text/javascript" src="./invest.gov.uz_files/map.js.download"></script>
-
-    <link rel="stylesheet" href="./invest.gov.uz_files/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA==" crossorigin="">
-    <script src="./invest.gov.uz_files/leaflet.js.download" integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA==" crossorigin=""></script>
-    <title></title>
-    <style>
-	.grecaptcha-badge{display:none;}
-
-        @media screen and (max-width: 600px) {
-            .header-items > div {
-                display: none;
-            }
-            .header-items > div.poscallcenter {
-                display: block;
-            }
-            .site-map-inner, .site-map .search-wrapper-item {
-                padding: 0;
-            }
-            .site-map-main > ul > li, .site-map-item {
-                width: 100%;
-            }
-            .site-map {
-                padding: 60px 0;
-                overflow-x: scroll;
-            }
-            .close-site-map {
-                top: 20px;
-            }
-            .header {
-                padding-top: 10px;
-                padding-bottom: 10px;
-            }
-            .header > .logo {
-                position: absolute;
-                right: 5px;
-                top: 20px;
-            }
-
-        }
-        .tech {
-            padding: 10px;
-            background: #4a8cd3;
-            color: #fff;
-            text-align: center;
-        }
-    </style>
-        <script type="text/javascript">
-        $(document).ready(function(){
-                        $(".breadcrumbs > span:first").find("span").html("Бош сахифа");
-            $(".wp-polls input[type='button']").attr('value', 'Vote');
-                    });
-    </script>
-    <link rel="dns-prefetch" href="https://www.google.com/">
-<link rel="dns-prefetch" href="https://s.w.org/">
-		<script type="text/javascript">
-			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/invest.gov.uz\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.5.13"}};
-			!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([55357,56424,8205,55356,57212],[55357,56424,8203,55356,57212])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
-		</script><script src="./invest.gov.uz_files/wp-emoji-release.min.js.download" type="text/javascript" defer=""></script>
-		<style type="text/css">
-img.wp-smiley,
-img.emoji {
-	display: inline !important;
-	border: none !important;
-	box-shadow: none !important;
-	height: 1em !important;
-	width: 1em !important;
-	margin: 0 .07em !important;
-	vertical-align: -0.1em !important;
-	background: none !important;
-	padding: 0 !important;
-}
-</style>
-	<link rel="stylesheet" id="wp-block-library-css" href="./invest.gov.uz_files/style.min.css" type="text/css" media="all">
-<link rel="stylesheet" id="contact-form-7-css" href="./invest.gov.uz_files/styles.css" type="text/css" media="all">
-<link rel="stylesheet" id="wp-polls-css" href="./invest.gov.uz_files/polls-css.css" type="text/css" media="all">
+	<link rel="stylesheet" id="wp-block-library-css" href="invest.gov.uz_files/style.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="contact-form-7-css" href="invest.gov.uz_files/styles.css" type="text/css" media="all">
+<link rel="stylesheet" id="wp-polls-css" href="invest.gov.uz_files/polls-css.css" type="text/css" media="all">
 <style id="wp-polls-inline-css" type="text/css">
 .wp-polls .pollbar {
 	margin: 1px;
@@ -220,129 +33,23 @@ img.emoji {
 }
 
 </style>
-<link rel="stylesheet" id="bvi-font-css" href="./invest.gov.uz_files/bvi-font.min.css" type="text/css" media="all">
-<link rel="stylesheet" id="bvi-css" href="./invest.gov.uz_files/bvi.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="bvi-font-css" href="invest.gov.uz_files/bvi-font.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="bvi-css" href="invest.gov.uz_files/bvi.min.css" type="text/css" media="all">
 <style id="bvi-inline-css" type="text/css">
 a.bvi-link {background-color:  !important; color: #000000 !important;}
 </style>
-<!--[if if lt IE 9]>
-<link rel='stylesheet' id='bvi-ie-9-css'  href='https://invest.gov.uz/wp-content/plugins/button-visually-impaired/assets/css/bootstrap-ie9.min.css?ver=1.0.8' type='text/css' media='all' />
-<![endif]-->
-<!--[if if lt IE 8]>
-<link rel='stylesheet' id='bvi-ie-8-css'  href='https://invest.gov.uz/wp-content/plugins/button-visually-impaired/assets/css/bootstrap-ie8.min.css?ver=1.0.8' type='text/css' media='all' />
-<![endif]-->
-<link rel="stylesheet" id="colorbox-css" href="./invest.gov.uz_files/colorbox.css" type="text/css" media="all">
-<script type="text/javascript" src="./invest.gov.uz_files/jquery.js(1).download" id="jquery-core-js"></script>
-<link rel="https://api.w.org/" href="https://invest.gov.uz/uz/wp-json/"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://invest.gov.uz/xmlrpc.php?rsd">
-<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://invest.gov.uz/wp-includes/wlwmanifest.xml"> 
-<link rel="prev" title="Наманган вилояти" href="https://invest.gov.uz/uz/regional-map/namanganskaya-oblast/">
-<link rel="next" title="Жиззах вилояти" href="https://invest.gov.uz/uz/regional-map/dzhizakskaya-oblast/">
-<meta name="generator" content="WordPress 5.5.13">
-<link rel="canonical" href="https://invest.gov.uz/uz/regional-map/buharskaya-oblast/">
-<link rel="shortlink" href="https://invest.gov.uz/uz/?p=1365">
-<link rel="alternate" type="application/json+oembed" href="https://invest.gov.uz/uz/wp-json/oembed/1.0/embed?url=https%3A%2F%2Finvest.gov.uz%2Fuz%2Fregional-map%2Fbuharskaya-oblast%2F">
-<link rel="alternate" type="text/xml+oembed" href="https://invest.gov.uz/uz/wp-json/oembed/1.0/embed?url=https%3A%2F%2Finvest.gov.uz%2Fuz%2Fregional-map%2Fbuharskaya-oblast%2F&amp;format=xml">
-<style type="text/css">
-.qtranxs_flag_ru {background-image: url(https://invest.gov.uz/wp-content/plugins/qtranslate-x/flags/ru.png); background-repeat: no-repeat;}
-.qtranxs_flag_en {background-image: url(https://invest.gov.uz/wp-content/plugins/qtranslate-x/flags/gb.png); background-repeat: no-repeat;}
-.qtranxs_flag_uz {background-image: url(https://invest.gov.uz/wp-content/plugins/qtranslate-x/flags/uz.png); background-repeat: no-repeat;}
-.qtranxs_flag_oz {background-image: url(https://invest.gov.uz/wp-content/plugins/qtranslate-x/flags/uz.png); background-repeat: no-repeat;}
-</style>
-<link hreflang="ru" href="https://invest.gov.uz/ru/regional-map/buharskaya-oblast/" rel="alternate">
-<link hreflang="en" href="https://invest.gov.uz/en/regional-map/buharskaya-oblast/" rel="alternate">
-<link hreflang="uz" href="https://invest.gov.uz/uz/regional-map/buharskaya-oblast/" rel="alternate">
-<link hreflang="oz" href="https://invest.gov.uz/oz/regional-map/buharskaya-oblast/" rel="alternate">
-<link hreflang="x-default" href="https://invest.gov.uz/regional-map/buharskaya-oblast/" rel="alternate">
-<meta name="generator" content="qTranslate-X 3.4.6.8">
-<link rel="icon" href="https://invest.gov.uz/wp-content/uploads/cropped-gerb-32x32.png" sizes="32x32">
-<link rel="icon" href="https://invest.gov.uz/wp-content/uploads/cropped-gerb-192x192.png" sizes="192x192">
-<link rel="apple-touch-icon" href="https://invest.gov.uz/wp-content/uploads/cropped-gerb-180x180.png">
-<meta name="msapplication-TileImage" content="https://invest.gov.uz/wp-content/uploads/cropped-gerb-270x270.png">
-<style id="MTQwMDAwMDAxOTk5OTkyOQ=="></style><script type="text/javascript" charset="utf-8" defer="" async="" src="chrome-extension://acpjhbjgjlpeanfemfbbkabadjolngdk/inject-scripts/patch-xhr.js" data-params="{}"></script><style id="__replain_styles"></style></head>
-<body class="regional-map-template-default single single-regional-map postid-1365 su-other-shortcodes-loaded" data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0">
-
-
 
 
 <div class="wrapper">
- <!--    <div class="tech">
-        Ведутся технические работы, возможны сбои в работе сайта
-    </div> -->
-    <div class="top">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6 col-6">
-                    <div class="top-icons">
-                        <div class="top-icon">
-                            <a href="https://invest.gov.uz/uz/sitemap/">
-                                <img src="./invest.gov.uz_files/top-icon-1.png" alt="">
-                            </a>
-                        </div>
-                        <!--
-                        <div class="top-icon">
-                            <a href="">
-                                <img src="https://invest.gov.uz/wp-content/themes/uzafi/images/top-icon-2.png" alt="">
-                            </a>
-                        </div>
-                        <div class="top-icon">
-                            <a href="">
-                                <img src="https://invest.gov.uz/wp-content/themes/uzafi/images/top-icon-3.png" alt="">
-                            </a>
-                        </div>
-                        -->
-                        <div class="top-icon">
-                            <div class="eye" style="padding: 0">
-                                <div class="eye-item">
-                                    <!-- Widget Shortcode --><div id="bvi_widget-2" class="widget widget_bvi_widget widget-shortcode area-arbitrary "><h2 class="widgettitle">Версия для слабовидящих</h2><a href="https://invest.gov.uz/uz/regional-map/buharskaya-oblast/#" class="bvi-link bvi-open"><i class="bvi-icon bvi-eye bvi-2x"></i> </a></div><!-- /Widget Shortcode -->                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 text-right col-12">
-                    <div class="lang">
-                        <div class="lang-item">
-                            <a href="https://invest.gov.uz/uz/regional-map/buharskaya-oblast/">
-
-                            </a>
-                        </div>
-                                           </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-   
             <div class="page-title text-center">
             <div class="container">
                 <h1 class="title white">
                     Buxoro viloyati iqtisodiy ko'rsatkichlari                </h1>
-                <div class="breadcrumbs">
-                    <!-- Breadcrumb NavXT 6.6.0 -->
-<span property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" title="Go to Ўзбекистоннинг инвестиция портали." href="https://invest.gov.uz/uz" class="home"><span property="name">Бош сахифа</span></a><meta property="position" content="1"></span><span property="itemListElement" typeof="ListItem" class="last"><a property="item" typeof="WebPage" title="Go to Ҳудудий харита." href="https://invest.gov.uz/uz/regional-map/" class="post post-regional-map-archive"><span property="name">Ҳудудий харита</span></a><meta property="position" content="2"></span>                </div>
-            </div>
+                </div>
         </div>
         
-    <div id="region-title" style="top: 1001px; left: 507px; display: none;">Олот тумани</div>
-<div class="content testt">
-    <div class="social">
-        <a target="_blank" href="https://fb.com/InvestinUzb/">
-            <i class="fab fa-facebook-f"></i>
-        </a>
-        <a target="_blank" href="https://www.linkedin.com/company/investinuzb/">
-            <i class="fab fa-linkedin-in"></i>
-        </a>
-        <a target="_blank" href="https://t.me/InvestinUzb">
-            <i class="fab fa-telegram-plane"></i>
-        </a>
-        <a target="_blank" href="https://www.instagram.com/investinuzb/">
-            <i class="fab fa-instagram"></i>
-        </a>
-        <a target="_blank" href="https://www.youtube.com/channel/UClURvM53wZ1hHYXGxu7YfNw">
-            <i class="fab fa-youtube"></i>
-        </a>
-    </div>
-            
-<script type="text/javascript" src="./invest.gov.uz_files/utils.js(1).download"></script>
+             
+<script type="text/javascript" src="invest.gov.uz_files/utils.js(1).download"></script>
 
 <div class="regional-map">
     <div class="container">
@@ -496,15 +203,45 @@ a.bvi-link {background-color:  !important; color: #000000 !important;}
 
 <div class="export-import">
     <div class="container">
+        
         <div class="row">
             <div class="col-lg-12">
                 <h3 class="title2">Eksport va import hajmi</h3>
             </div>
+            
             <div class="col-lg-6"><div class="chartjs-size-monitor" style="position: absolute; inset: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;"><div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div></div><div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:200%;height:200%;left:0; top:0"></div></div></div>
                 <canvas id="export-import-1" style="width: 470px; height: 846px; display: block;" width="587" height="1057" class="chartjs-render-monitor"></canvas>
             </div>
             <div class="col-lg-6"><div class="chartjs-size-monitor" style="position: absolute; inset: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;"><div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div></div><div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:200%;height:200%;left:0; top:0"></div></div></div>
                 <canvas id="export-import-2" style="width: 470px; height: 846px; display: block;" width="587" height="1057" class="chartjs-render-monitor"></canvas>
+            </div>
+            
+             <h4><a href="https://daryo.uz/k/2023/05/31/ozbekistoneron-ortasida-savdodagi-tosiqlarni-bartaraf-etish-boyicha-ishchi-guruh-tuziladi?ysclid=loqqpdjfxu176846609">Savdo munosabatlari to'g'risida</a></h4>           
+        </div>
+    </div>
+</div>
+<!--Eksport va import tahlili           #############################################################################################################-->
+<div class="specialization">
+    <div class="container">
+        <div class="row" style="justify-content: center;">
+           
+            <div class="col-lg-6">
+                <h3 style="text-align: center" class="title2">Eksport tarkibi</h3>
+                <div class="specialization-item"><div class="chartjs-size-monitor" style="position: absolute; inset: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;"><div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div></div><div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:200%;height:200%;left:0; top:0"></div></div></div>
+                    <canvas style="width: 470px; height: 338px; display: block;" id="eksport_1" width="587" height="422" class="chartjs-render-monitor"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="specialization">
+    <div class="container">
+        <div class="row" style="justify-content: center;">
+            <div class="col-lg-6">
+                <h3 style="text-align: center" class="title2">Import tartkibi</h3>
+                <div class="specialization-item"><div class="chartjs-size-monitor" style="position: absolute; inset: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;"><div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div></div><div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:200%;height:200%;left:0; top:0"></div></div></div>
+                    <canvas style="width: 470px; height: 338px; display: block;" id="eksport_2" width="587" height="422" class="chartjs-render-monitor"></canvas>
+                </div>
             </div>
         </div>
     </div>
@@ -514,6 +251,7 @@ a.bvi-link {background-color:  !important; color: #000000 !important;}
         <div class="row" style="justify-content: center;">
             <div class="col-lg-12">
                 <h3 class="title2">Ixtisoslashuv (mln so'm)</h3>
+                <a href="https://www.google.com/search?sca_esv=580697965&tbm=lcl&q=Bahor+Chance+Textile+LLC&rflfq=1&num=20&stick=H4sIAAAAAAAAABWQO0otQRRFuYEP837Bo6Mewvl_Uk0NnYA8LiiIghgYyjUydwSOQBBFHEX3NByFuyrpqupz1lm7jv_MU1WSeUkreXZwRs9_WaqMccSpyFq1bJ7wMS5qK6N0LiyUWieKDZBoCe7mwC2HdQHZreiIaKZ5MmoAvVm8iZtQPU_qbWFOHkQunpKOfooolXZ2lGYpOOO2DYrMroI_JEygguPGJCIRyqrUQ0uADIlkhf5AJxIgnWnCDcO72t1kUN1cssXhJ5iQliOXqShUS2BWNSQGgKmiNZVFAEliJCgOBcAT6VtIQZ0EAoxug5oyJduwwivBLB1s5NRwHqNCieBZ5XhBJCWEnUYOLvAkvKFdFm-73c9uWV-2x-1pfV-_1o9lO6xv6_f6ie36tT1vT9vh9ejfycXl7d1yenlx83-_nO8f7q-u98vZ2ekvjBls__EBAAA&sa=X&ved=2ahUKEwjmoZeygraCAxXiJBAIHXiPD4sQ63UoAXoECBoQAg&biw=1434&bih=722&dpr=1.25#rlfi=hd:;si:;mv:[[39.83643840527978,64.61729298623045],[39.68415575012314,64.26916371376952]]">Maps</a>
             </div>
             <div class="col-lg-6">
                 <h3 style="text-align: center" class="title2">Sanoat(mln. so'm)</h3>
@@ -714,7 +452,7 @@ a.bvi-link {background-color:  !important; color: #000000 !important;}
     <div class="container">
         <div class="row">
                         <div class="col-lg-6">
-                <img src="https://invest.gov.uz/uz/regional-map/buharskaya-oblast/">
+                
             </div>
             <div class="col-lg-6"><div class="chartjs-size-monitor" style="position: absolute; inset: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;"><div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div></div><div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:200%;height:200%;left:0; top:0"></div></div></div>
                 <canvas id="lease-cost" style="width: 470px; height: 550px; display: block;" width="587" height="687" class="chartjs-render-monitor"></canvas>
@@ -723,7 +461,18 @@ a.bvi-link {background-color:  !important; color: #000000 !important;}
     </div>
 </div>
 
-
+<div class="wrapper">
+    <!--    <div class="tech">
+           Ведутся технические работы, возможны сбои в работе сайта
+       </div> -->
+       
+      
+               <div class="page-title text-center">
+               <div class="container">
+                   <h1 class="title white">
+                      Created by: Saydullayev Akmalxon Abubakirov Axadjon <br> <i class="fa fa-copyright" aria-hidden="true">All rights reserved NamDu 2023 </i>               </h1>
+                   </div>
+           </div>
 
 
 
@@ -737,7 +486,7 @@ var config = {
             2012,2013,2014,2015,2016,2017,2018, 2019, 2020, 2021, 2022       ],
         datasets: [
             {
-                label: "Yahm dinamikasi(mlrd. so'mda)",
+                label: "YaHM dinamikasi(mlrd. so'mda)",
                 backgroundColor: color(window.chartColors.red).alpha(0.5).rgbString(),
                 borderColor: window.chartColors.red,
                 fill: false,
@@ -787,7 +536,7 @@ var horizontalBarChartData = {
     labels: [
         '2021','2022',    ],
     datasets: [{
-        label: 'Қишлоқ хўжалиги, ўрмончилик ва балиқчилик',
+        label: 'Qishloq xoʼjaligi, oʼrmonchilik va baliqchilik',
         backgroundColor: 'rgb(255, 99, 132)',
         stack: 'Stack 0',
         data: [
@@ -799,13 +548,13 @@ var horizontalBarChartData = {
         data: [
             20.3,19.7,        ]
     }, {
-        label: 'Қурилиш',
+        label: 'Qurilish',
         backgroundColor: 'rgb(255, 205, 86)',
         stack: 'Stack 0',
         data: [
             10.4,9.7,        ]
     }, {
-        label: 'Хизматлар',
+        label: 'Xizmatlar',
         backgroundColor: 'rgb(75, 192, 192)',
         stack: 'Stack 0',
         data: [
@@ -846,7 +595,7 @@ var config = {
             2016,2017,        ],
         datasets: [
             {
-                label: 'Аҳоли жон бошига яҳм',
+                label: 'Aholi jon boshiga YaHM(per capita)',
                 backgroundColor: [
                     'rgb(255, 99, 132)',
                     'rgb(255, 159, 64)',
@@ -899,7 +648,7 @@ var config = {
             2016,2017,        ],
         datasets: [
             {
-                label: 'Асосий капиталга инвестициялар',
+                label: 'Asosiy kapitalga investitsiyalar',
                 backgroundColor: [
                     'rgb(255, 99, 132)',
                     'rgb(255, 159, 64)',
@@ -951,7 +700,7 @@ var config = {
             2016,2017,        ],
         datasets: [
             {
-                label: 'Аҳоли жон бошига инвестициия',
+                label: 'aholi jon boshiga investitsiyalar',
                 backgroundColor: [
                     'rgb(255, 99, 132)',
                     'rgb(255, 159, 64)',
@@ -1054,15 +803,15 @@ window.onload = function() {
     var color = Chart.helpers.color;
     var horizontalBarChartData = {
         labels: [
-            'Бухоро ш.','Когон ш','Олот','Бухоро','Вобкент','Ғиждувон','Жондор','Когон','Қоракўл','Қоровулбозор','Пешку','Ромитон','Шофиркон',        ],
+        'Buxoro sh.','Kogon sh','Olot','Buxoro','Vobkent','Gʻijduvon','Jondor','Kogon','Qorakoʻl','Qorovulbozor','Peshku','Romiton','Shofirkon',        ],
         datasets: [{
-            label: 'Шаҳар',
+            label: 'Shahar',
             backgroundColor: window.chartColors.blue,
             stack: 'Stack 0',
             data: [
                 252.0,60.2,36.4,36.6,26.4,89.8,32.3,5.3,60.2,10.2,15.1,34.3,39.8,            ]
         }, {
-            label: 'Қишлоқ',
+            label: 'Qishloq',
             backgroundColor: window.chartColors.green,
             stack: 'Stack 0',
             data: [
@@ -1127,12 +876,95 @@ window.onload = function() {
                 label: 'Dataset 1'
             }],
             labels: [
-                'Ўрта','Ўрта махсус','Олий',            ]
+                "O'rta","O'rta maxsus","Oliy",            ]
         },
         options: {
             responsive: true
         }
     };
+
+    var config = {
+    type: 'pie',
+    data: {
+        datasets: [{
+            data: [1.1
+,13.6
+,3.9
+,21.6
+,0.1
+,0.0
+,6.0
+,53.7
+],
+            backgroundColor: [
+                'rgb(255, 99, 132)',
+                'rgb(255, 159, 64)',
+                'rgb(255, 205, 86)',
+                'rgb(75, 192, 192)',
+                'rgb(54, 162, 235)',
+                'rgb(153, 102, 255)',
+                'rgb(120, 65, 100)',
+            ],
+            label: 'Dataset 1'
+        }],
+        labels: ["paxta tolasi","oziq-ovqat mahsulotlari","kimyo mahsulotlari va undan tayyorlangan buyumlar","energiya manbaalari va neft mahsulotlari","qora va rangli metallar","mashina va asbob-uskunalar","xizmatlar","boshqalar",
+        ]
+    },
+    options: {
+        responsive: true,
+    }
+};
+
+var eksport_1 = document.getElementById('eksport_1').getContext('2d');
+window.myPie = new Chart(eksport_1, config);
+
+
+
+
+
+
+
+var config = {
+    type: 'pie',
+    data: {
+        datasets: [{
+            data: [2.6
+,11.4
+,50.4
+,2.1
+,24.0
+,0.1
+,9.4
+
+],
+            backgroundColor: [
+                'rgb(255, 99, 132)',
+                'rgb(255, 159, 64)',
+                'rgb(255, 205, 86)',
+                'rgb(75, 192, 192)',
+                'rgb(54, 162, 235)',
+                'rgb(153, 102, 255)',
+                
+            ],
+            label: 'Dataset 1'
+        }],
+        labels: ["oziq-ovqat mahsulotlari","kimyo mahsulotlari va undan tayyorlangan buyumlar","energiya manbaalari va neft mahsulotlari","qora va rangli metallar","mashina va asbob-uskunalar","xizmatlar","boshqalar",
+        ]
+    },
+    options: {
+        responsive: true,
+    }
+};
+
+var eksport_2 = document.getElementById('eksport_2').getContext('2d');
+window.myPie = new Chart(eksport_2, config);
+
+
+
+
+
+
+
 
     var ctx_round_2 = document.getElementById('round-2').getContext('2d');
     window.myPie = new Chart(ctx_round_2, config);
@@ -1142,17 +974,15 @@ window.onload = function() {
         data: {
             datasets: [{
                 data: [
-                    1498202.2
-,1037767.7
-,200957.3
-,5412.8
-,9392.1
-,214089.1
-,4558.1
-,313408.8
-,215267.4
-,56223
-,2797774.8,                ],
+                27202382.0
+ ,25712824.7   
+ ,3583383.9   
+ ,5234240.9   
+ ,13099206.9   
+ ,1,230664.4   
+ ,983325.8   
+
+                ],
                 backgroundColor: [
                     'rgb(255, 99, 132)',
                     'rgb(255, 159, 64)',
@@ -1179,7 +1009,7 @@ window.onload = function() {
                 label: 'Dataset 1'
             }],
             labels: [
-                'Озиқ-овқат маҳсулотлари ишлаб чиқариш','Трикотаж маҳсулотлари ишлаб чиқариш','Тўқимачилик','Фармацевтика','Чарм-тери маҳсулотлари','Электр, газ, буғ билан таъминлаш ва ҳавони кондициялаш','Металлургия','Хом нефт ва табиий газ казиб олиш','Машина ва ускуналардан ташкари тайёр металл буюмлар ишлаб чикариш ','Мебель ишлаб чикариш','Саноатнинг бошқа турлари',            ]
+            "Sanoat mahsuloti hajmi, mln so‘m","Ishlab chiqaradigan sanoat","Oziq-ovqat mahsulotlari ishlab chiqarish","To‘qimachilik mahsulotlari ishlab chiqarish","Koks va neftni qayta ishlash mahsulotlari ishlab chiqarish", "Boshqa nometall mineral mahsulotlar ishlab chiqarish","Elektr, gaz, bug‘ bilan ta`minlash va havoni konditsiyalash",            ]
         },
         options: {
             responsive: true,
@@ -1194,17 +1024,20 @@ window.onload = function() {
         data: {
             datasets: [{
                 data: [
-                    1739.5
-,3174.3
-,296574
-,310825
-,144782
-,694836
-,296574
-,188967
-,288.2
-,1189007
-,3733415,                ],
+                620110.6
+,251333.0
+,889542.5
+,198296.5
+,291963.0
+,216821.1
+,286589.0
+,1051801.0
+,519679.0
+,2292.8
+,4129.0
+,565814
+,2574.4
+               ],
                 backgroundColor: [
                     'rgb(255, 99, 132)',
                     'rgb(255, 159, 64)',
@@ -1230,8 +1063,7 @@ window.onload = function() {
                 ],
                 label: 'Dataset 1'
             }],
-            labels: [
-                'Асаларичилик','Балиқчилик','Боғдорчилик','Пахтачилик','Полизчилик','Сабзавотчилик','Мева','Узумчилик','Иссиқхона хўжалиги','Чорвачилик','Паррандачилик',            ]
+            labels: ["Don va dukkakli don ekinlari jami","Kartoshka","Sabzavotlar","Oziqbop poliz","Mevalar va rezavorlar","Uzum","Go‘sht (tirik vaznda)","Sut","Tuxum","Asal","Qirqib olingan jun","Olingan qorako‘l terilar","Pilla",          ]
         },
         options: {
             responsive: true
@@ -1246,19 +1078,21 @@ window.onload = function() {
         data: {
             datasets: [{
                 data: [
-                    319.2
-,465.9
-,1574.9
-,230.3
-,1763.8
-,150.1
-,215.5
-,104.2
-,150.6
-,137.6
-,121.0
-,46.2
-,141.8,                ],
+                628.3
+,3128.5
+,3298.1
+,2910.1
+,643.8
+,5043.6
+,321.8
+,773.2
+,321.2
+,367.1
+,317.0
+,336.3
+,158.1
+,511.8
+                ],
                 backgroundColor: [
                     'rgb(255, 99, 132)',
                     'rgb(255, 159, 64)',
@@ -1284,9 +1118,7 @@ window.onload = function() {
                 ],
                 label: 'Dataset 1'
             }],
-            labels: [
-                'Алоқа ва ахборотлаштириш хизматлари','Молиявий хизматлар','Транспорт хизматлари','Яшаш ва овқатланиш хизматлари','Савдо хизматлари','Кўчмас мулк билан боғлиқ хизматлар','Таълим хизматлари','Соғлиқни сақлаш хизматлари','Ижара ва проккат хизматлари','Компьюетр ва маиший товарларни таъмирлаш хизматлари','Якка тартибдаги хизматлар','Архитектура, муҳандислик изланишлари, техник синов ва таҳлил хизматлари','Бошқа хизматлар',            ]
-        },
+            labels: ["axborot va aloqa sohasidagi xizmatlari","moliya xizmatlari","transport xizmatlari","shu jumladan: avtotransport xizmati","yashash va ovqatlanish bo'yicha xizmatlar","savdo xizmatlari","ko'chmas mulk bilan bog'liq xizmatlar","ta'lim sohasidagi xizmatlar","sog'liqni saqlash sohasidagi xizmatlar","ijara va lizing bo'yicha xizmatlar","kompyuterlar, shaxsiy foydalanish buyumlari va maishiy tovarlarni ta'mirlash bo'yicha xizmatlar","shaxsiy xizmatlar","me'morchilik, muhandislik izlanishlari, texnik sinovlar va tahlil sohasidagi xizmatlar","boshqa xizmatlar",         ]},
         options: {
             responsive: true
         }
@@ -1304,9 +1136,9 @@ window.onload = function() {
     var color = Chart.helpers.color;
     var horizontalBarChartData = {
         labels: [
-            'Саноат','Савдо','Таълим','Қишлоқ хўжалиги','Қурилиш','Соғлиқни сақлаш ва ижтимоий хизматлар','Давлат бошқаруви','Бошқа хизматлар','Яшаш ва овқатланиш хизматлари',        ],
+        'Sanoat','Savdo','Ta`lim','Qishloq xoʻjaligi','Qurilish','Sogʻliqni saqlash va ijtimoiy xizmatlar','Davlat boshqaruvi','Boshqa xizmatlar','Yashash va ovqatlanish xizmatlari',        ],
         datasets: [{
-            label: 'тыс.сум',
+            label: 'ming so`m',
             backgroundColor: color(window.chartColors.blue).alpha(0.5).rgbString(),
             borderColor: window.chartColors.blue,
             borderWidth: 1,
@@ -1354,9 +1186,8 @@ window.onload = function() {
     var color = Chart.helpers.color;
     var horizontalBarChartData = {
         labels: [
-            'Саноат','Савдо','Таълим','Қишлоқ хўжалиги','Қурилиш','Соғлиқни сақлаш ва ижтимоий хизматлар','Давлат бошқаруви','Бошқа хизматлар','Яшаш ва овқатланиш хизматлари','Бошқа тармоқлар',        ],
-        datasets: [{
-            label: 'тыс.чел',
+        'Sanoat','Savdo','Ta`lim','Qishloq xoʻjaligi','Qurilish','Sogʻliqni saqlash va ijtimoiy xizmatlar','Davlat boshqaruvi','Boshqa xizmatlar','Yashash va ovqatlanish xizmatlari','Boshqa tarmoqlar',        ],  datasets: [{
+            label: 'ming kishi',
             backgroundColor: color(window.chartColors.blue).alpha(0.5).rgbString(),
             borderColor: window.chartColors.blue,
             borderWidth: 1,
@@ -1405,17 +1236,16 @@ window.onload = function() {
     var color = Chart.helpers.color;
     var horizontalBarChartData = {
         labels: [
-            'Бухоро ш.','Когон ш.','Олот','Бухоро','Вобкент','Ғиждувон','Жондор','Когон','Қоракўл','Қоровулбозор','Пешку','Ромитон','Шофиркон',        ],
-        datasets: [
+        'Buxoro sh.','Kogon sh.','Olot','Buxoro','Vobkent','Gʻijduvon','Jondor','Kogon','Qorakoʻl','Qorovulbozor','Peshku','Romiton','Shofirkon',        ], datasets: [
             {
-                label: 'Ёлланма',
+                label: 'yollanma',
                 backgroundColor: window.chartColors.blue,
                 stack: 'Stack 0',
                 data: [
                     119.7,31.445,27.72,46.9,40.67,87.01,49.7,24.15,52.43,10.29,35.21,44.38,48.72,                ]
             },
             {
-                label: 'Ўзини-ўзи банд қилганлар',
+                label: 'o`zini band qilganlar',
                 backgroundColor: window.chartColors.green,
                 stack: 'Stack 0',
                 data: [
@@ -1503,10 +1333,10 @@ window.onload = function() {
 
     var barChartData = {
         labels: [
-            'Бухоро ш.','Когон ш.','Олот','Бухоро','Вобкент','Ғиждувон','Жондор','Когон','Қоракўл','Қоровулбозор','Пешку','Ромитон','Шофиркон',        ],
+            'Buxoro sh.','Kogon sh.','Olot','Buxoro','Vobkent','Gʻijduvon','Jondor','Kogon','Qorakoʻl','Qorovulbozor','Peshku','Romiton','Shofirkon',        ],
         datasets: [
             {
-                label: 'сўм/м2',
+                label: 'soʻm/m kv.',
                 backgroundColor: "#7cb8e1",
                 borderColor: "#43a7eb",
                 borderWidth: 1,
@@ -1554,17 +1384,15 @@ window.onload = function() {
     });
 
     var barChartData = {
-        labels: [
-            'Эрон','Хитой','Афғонистон','Қозоғистон','Россия','Бангладеш','Туркманистон','Туркия','Вьетнам','Украина','Қирғизистон','Тожикистон','Озарбайжон','Белорус','Бошқалар',        ],
-        datasets: [{
-            label: 'Минг доллар',
+        labels: ['Eron','Xitoy','Afgʻoniston','Qozogʻiston','Rossiya','Bangladesh','Turkmaniston','Turkiya','Vetnam','Ukraina','Qirgʻiziston','Tojikiston','Ozarbayjon','Belorus','Boshqalar',        ], datasets: [{
+            label: 'ming dollar',
             backgroundColor: "#7cb8e1",
             borderColor: "#7cb8e1",
             stack: 'Stack 0',
             data: [
                 0.0607,0.0305,0.0278,0.0204,0.0182,0.012,0.0032,0.0032,0.0014,0.0012,0.0009,0.0004,0.0003,0.0001,0.017,            ]
         }, {
-            label: 'Умумий экспортга нисбатан улуши',
+            label: 'Umumiy eksportga nisbatan ulushi',
             backgroundColor: "#9ad0f5",
             borderColor: "#9ad0f5",
             stack: 'Stack 0',
@@ -1613,16 +1441,15 @@ window.onload = function() {
 
     var barChartData = {
         labels: [
-            'Эрон','Хитой','Афғонистон','Қозоғистон','Россия','Бангладеш','Туркманистон','Туркия','Украина','Қирғизистон','Тожикистон','Беларус','Бошқалар',        ],
-        datasets: [{
-            label: 'Минг доллар',
+        'Eron','Xitoy','Afgʻoniston','Qozogʻiston','Rossiya','Bangladesh','Turkmaniston','Turkiya','Ukraina','Qirgʻiziston','Tojikiston','Belarus','Boshqalar',        ], datasets: [{
+            label: 'ming dollar',
             backgroundColor: "#7cb8e1",
             borderColor: "#7cb8e1",
             stack: 'Stack 0',
             data: [
                 0.0045,0.089,0.0001,0.0066,0.4209,0.0002,0.0837,0.0065,0.0118,0.0001,0.0002,0.0062,0.0592,            ]
         }, {
-            label: 'Умумий импортга нисбатан улуши',
+            label: 'umumiy importga nisbatan ulushi',
             backgroundColor: "#9ad0f5",
             borderColor: "#9ad0f5",
             stack: 'Stack 0',
@@ -1675,22 +1502,21 @@ window.onload = function() {
         'Бухоро ш.','Когон ш.','Олот','Бухоро','Вобкент','Ғиждувон','Жондор','Когон','Қоракўл','Қоровулбозор','Пешку','Ромитон','Шофиркон',    ];
     var color = Chart.helpers.color;
     var horizontalBarChartData = {
-        labels: [
-            'Бухоро ш.','Когон ш.','Олот','Бухоро','Вобкент','Ғиждувон','Жондор','Когон','Қоракўл','Қоровулбозор','Пешку','Ромитон','Шофиркон',        ],
+        labels: ['Buxoro sh.','Kogon sh.','Olot','Buxoro','Vobkent','Gʻijduvon','Jondor','Kogon','Qorakoʻl','Qorovulbozor','Peshku','Romiton','Shofirkon',        ],
         datasets: [{
-            label: '200 одам/км2',
+            label: '200 odam/km kv.',
             backgroundColor: window.chartColors.blue,
             stack: 'Stack 0',
             data: [
                 3794.6,3921.5,0,0,461.8,0,0,0,0,0,0,0,0,            ]
         }, {
-            label: '100 дан 199 гача одам/км2',
+            label: '100 dan 199 gacha kishi/км2',
             backgroundColor: window.chartColors.green,
             stack: 'Stack 0',
             data: [
                 0,0,0,121.1,0,0,0,147.6,0,0,0,0,0,            ]
         }, {
-            label: '99 гача чел/км2',
+            label: '99 tagacha kishi/км2',
             backgroundColor: window.chartColors.red,
             stack: 'Stack 0',
             data: [
@@ -1741,295 +1567,8 @@ window.onload = function() {
 </script>        </div>
 <script src="./invest.gov.uz_files/orphus.js.download"></script>
 
-<div class="copyright">
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <p>Invest.gov.uz инвестицион порталининг ҳар қандай материаллари (такрор ишлаб чиқариш, нашр этиш, нусха олиш, қайта чоп этиш, тарқатиш, таржима қилиш, телекўрсатув, қайта ишлаш ва бошқа тарқатиш усуллари) - биринчи манба ва порталнинг ҳаволаси кўрсатилмаган ҳолда ишлатилиши қатъиян тақиқланади!</p>
-            </div>
-        </div>
-    </div>
-</div>
-</div>
-
-<div class="site-map">
-    <div class="close-site-map">
-        <i class="fa fa-window-close"></i>
-    </div>
-    <div class="container">
-        <div class="search-wrapper-item">
-            <form role="search" method="get" id="searchform" action="https://invest.gov.uz/uz/">
-                <input placeholder="Сайтдан қидириш:" type="text" value="" name="s" id="s">
-                <input type="submit" id="searchsubmit" value="Излаш">
-            </form>
-        </div>
-    </div>
-    <div class="site-map-inner">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="site-map-main">
-                    <ul id="menu-mainmenu-1" class=""><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-193"><a href="http://invest.gov.uz/uz/investor">Инвестор учун</a></li>
-<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-710"><a href="http://invest.gov.uz/uz/investor_for">Инвестор қидириш</a></li>
-<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-619"><a>Интерактив хариталар</a>
-<ul class="sub-menu">
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-48"><a href="https://invest.gov.uz/uz/region-map/">Ҳудудий харита</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1239"><a href="https://invest.gov.uz/uz/regionalnaya-karta/">Инвестициялар харитаси</a></li>
-</ul>
-</li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-79"><a href="https://invest.gov.uz/uz/about-cometee/our-mission/">Агентлик</a>
-<ul class="sub-menu">
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4690"><a href="https://invest.gov.uz/uz/about-cometee/our-mission/">Агентлик ҳақида</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14199"><a href="https://invest.gov.uz/uz/single-window/">Ягона дарча</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4691"><a href="https://invest.gov.uz/uz/about-cometee/our-structure/">Агентликнинг таркибий тузилмаси</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4689"><a href="https://invest.gov.uz/uz/about-cometee/vacancies/">Бўш иш ўрни</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4914"><a href="https://invest.gov.uz/uz/about-cometee/faq/">Тез-тез берилаётган саволлар</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15099"><a href="https://invest.gov.uz/uz/about-cometee/guarantees-of-equal-rights-and-opportunities-for-women-and-men/">Аёллар ва эркаклар учун тенг ҳуқуқ ҳамда имкониятлар кафолатлари</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5353"><a href="https://invest.gov.uz/uz/about-cometee/russkij-protivodejstvie-korruptsii/">Коррупцияга қарши курашиш</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10992"><a href="https://invest.gov.uz/uz/about-cometee/agency-cost-items/">Агентлик харажатлари моддалари</a></li>
-</ul>
-</li>
-<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-5063"><a href="https://invest.gov.uz/uz/news/">Медиамарказ</a>
-<ul class="sub-menu">
-	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-46"><a href="https://invest.gov.uz/uz/category/mediacenter/news/">Янгилик ва воқеалар</a></li>
-	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-4995"><a href="https://invest.gov.uz/uz/category/mediacenter/otkrytye-dannye/">Очиқ маълумотлар</a></li>
-	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-5047"><a href="https://invest.gov.uz/uz/category/mediacenter/videogalereya/">Видеогалерея</a></li>
-	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5048"><a href="https://invest.gov.uz/uz/category/mediacenter/publikatsii/">Медиа материаллар</a></li>
-</ul>
-</li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-419"><a href="https://invest.gov.uz/uz/contacts/">Алоқа учун маълумотлар</a></li>
-</ul>                </div>
-                <div class="site-map-items">
-                    <div class="site-map-item">
-                        <ul id="menu-investor" class=""><li id="menu-item-1537" class="menu-item menu-item-type-taxonomy menu-item-object-investor-taxonomy menu-item-has-children menu-item-1537"><a href="https://invest.gov.uz/uz/investor-taxonomy/potential/">Ўзбекистоннинг инвестиция салоҳияти</a>
-<ul class="sub-menu">
-	<li id="menu-item-5044" class="menu-item menu-item-type-taxonomy menu-item-object-investor-taxonomy menu-item-5044"><a href="https://invest.gov.uz/uz/investor-taxonomy/pochemu-vygodno-investirovat-v-uzbekistan/">Почему выгодно инвестировать в Узбекистан</a></li>
-	<li id="menu-item-1538" class="menu-item menu-item-type-taxonomy menu-item-object-investor-taxonomy menu-item-1538"><a href="https://invest.gov.uz/uz/investor-taxonomy/korotko-ob-uzbekistane/">Қисқача Ўзбекистон ҳақида</a></li>
-	<li id="menu-item-1543" class="menu-item menu-item-type-taxonomy menu-item-object-investor-taxonomy menu-item-1543"><a href="https://invest.gov.uz/uz/investor-taxonomy/uzbekistan-v-mezhdunarodnyh-rejtingah/">Ўзбекистон халқаро  рейтингларда</a></li>
-	<li id="menu-item-741" class="menu-item menu-item-type-taxonomy menu-item-object-investor-taxonomy menu-item-741"><a href="https://invest.gov.uz/uz/investor-taxonomy/success-stories/">Инвесторлар муваффақияти тарихи</a></li>
-	<li id="menu-item-6175" class="menu-item menu-item-type-taxonomy menu-item-object-investor-taxonomy menu-item-6175"><a href="https://invest.gov.uz/uz/investor-taxonomy/mezhdunarodnye-dogovora-v-sfere-investitsij/">Халқаро инвестиция шартномалари</a></li>
-</ul>
-</li>
-<li id="menu-item-12118" class="menu-item menu-item-type-taxonomy menu-item-object-investor-taxonomy menu-item-has-children menu-item-12118"><a href="https://invest.gov.uz/uz/investor-taxonomy/investitsionnoe-zakonodatelstvo/">Инвестиция қонунчилиги</a>
-<ul class="sub-menu">
-	<li id="menu-item-1539" class="menu-item menu-item-type-taxonomy menu-item-object-investor-taxonomy menu-item-1539"><a href="https://invest.gov.uz/uz/investor-taxonomy/investitsionnoe-zakonodatelstvo-uzbekistana/">Ўзбекистоннинг  инвестициявий қонунчилиги</a></li>
-	<li id="menu-item-12117" class="menu-item menu-item-type-post_type menu-item-object-investor menu-item-12117"><a href="https://invest.gov.uz/uz/investor/legal-information/">Хуқуқий маълумот</a></li>
-</ul>
-</li>
-<li id="menu-item-5443" class="menu-item menu-item-type-taxonomy menu-item-object-invest-offers-taxonomy menu-item-has-children menu-item-5443"><a href="https://invest.gov.uz/uz/invest-offers-taxonomy/investitsionnye-predlozheniya/">Инвестиция таклифлари</a>
-<ul class="sub-menu">
-	<li id="menu-item-698" class="menu-item menu-item-type-taxonomy menu-item-object-investor-taxonomy menu-item-698"><a href="https://invest.gov.uz/uz/investor-taxonomy/ready-invest-projects/">Инвестицион лойиҳалар</a></li>
-	<li id="menu-item-6294" class="menu-item menu-item-type-post_type menu-item-object-investor menu-item-6294"><a href="https://invest.gov.uz/uz/investor/center-for-development-of-investment-projects/">Худудлар бўйича устувор лойиҳалар</a></li>
-	<li id="menu-item-6425" class="menu-item menu-item-type-post_type menu-item-object-investor menu-item-6425"><a href="https://invest.gov.uz/uz/investor/proposed-projects-for-implementation/">Давлат дастурига киритилган истиқболли лойиҳалар рўйҳати</a></li>
-	<li id="menu-item-5447" class="menu-item menu-item-type-post_type menu-item-object-investor menu-item-5447"><a href="https://invest.gov.uz/uz/investor/proposals-from-governmental-bodies/">Вазирлик, идора ва хўжалик бирлашмаларидан инвестицион таклифлар</a></li>
-</ul>
-</li>
-<li id="menu-item-700" class="menu-item menu-item-type-taxonomy menu-item-object-investor-taxonomy menu-item-has-children menu-item-700"><a href="https://invest.gov.uz/uz/investor-taxonomy/otrasli/">Соҳалар</a>
-<ul class="sub-menu">
-	<li id="menu-item-11420" class="menu-item menu-item-type-post_type menu-item-object-investor menu-item-11420"><a href="https://invest.gov.uz/uz/investor/education/">Таълим</a></li>
-	<li id="menu-item-728" class="menu-item menu-item-type-post_type menu-item-object-investor menu-item-728"><a href="https://invest.gov.uz/uz/investor/tourism/">Туризм</a></li>
-	<li id="menu-item-721" class="menu-item menu-item-type-post_type menu-item-object-investor menu-item-721"><a href="https://invest.gov.uz/uz/investor/ikt/">АКТ</a></li>
-	<li id="menu-item-733" class="menu-item menu-item-type-post_type menu-item-object-investor menu-item-733"><a href="https://invest.gov.uz/uz/investor/elektrotehnicheskaya-sfera/">Электротехника соҳаси</a></li>
-	<li id="menu-item-722" class="menu-item menu-item-type-post_type menu-item-object-investor menu-item-722"><a href="https://invest.gov.uz/uz/investor/textile/">Тўқимачилик саноати</a></li>
-	<li id="menu-item-1324" class="menu-item menu-item-type-post_type menu-item-object-investor menu-item-1324"><a href="https://invest.gov.uz/uz/investor/kozhevenno-obuvnaya-otrasl/">Чарм-пойабзал тармоғи</a></li>
-	<li id="menu-item-1854" class="menu-item menu-item-type-post_type menu-item-object-investor menu-item-1854"><a href="https://invest.gov.uz/uz/investor/pishhevaya-promyshlennost/">Озиқ-овқат саноати</a></li>
-	<li id="menu-item-731" class="menu-item menu-item-type-post_type menu-item-object-investor menu-item-731"><a href="https://invest.gov.uz/uz/investor/farmatsevticheskaya-promyshlennost/">Фармацевтика саноати</a></li>
-	<li id="menu-item-729" class="menu-item menu-item-type-post_type menu-item-object-investor menu-item-729"><a href="https://invest.gov.uz/uz/investor/tek/">ЁЭМ</a></li>
-	<li id="menu-item-732" class="menu-item menu-item-type-post_type menu-item-object-investor menu-item-732"><a href="https://invest.gov.uz/uz/investor/himicheskaya-otrasl/">Кимё тармоғи</a></li>
-	<li id="menu-item-2192" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2192"><a href="http://invest.gov.uz/uz/investor/mashinostroitelnaya-sfera/">Машинасозлик соҳаси</a></li>
-	<li id="menu-item-2139" class="menu-item menu-item-type-taxonomy menu-item-object-investor-taxonomy menu-item-has-children menu-item-2139"><a href="https://invest.gov.uz/uz/investor-taxonomy/transportnyj-sektor/">Транспорт шўъбаси</a>
-	<ul class="sub-menu">
-		<li id="menu-item-2194" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2194"><a href="http://invest.gov.uz/uz/investor/zheleznodorozhnaya-otrasl/">Темир йўл тармоғи</a></li>
-		<li id="menu-item-2193" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2193"><a href="http://invest.gov.uz/uz/investor/aviatsionnaya-otrasl/">Авиатсия саноати</a></li>
-		<li id="menu-item-2227" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2227"><a href="http://invest.gov.uz/uz/investor/dorozhno-transportnaya-infrastruktura-2/">Йўл-транспорт инфратузилмаси</a></li>
-	</ul>
-</li>
-	<li id="menu-item-727" class="menu-item menu-item-type-post_type menu-item-object-investor menu-item-727"><a href="https://invest.gov.uz/uz/investor/stroitelstvo/">Қурилиш</a></li>
-	<li id="menu-item-725" class="menu-item menu-item-type-post_type menu-item-object-investor menu-item-725"><a href="https://invest.gov.uz/uz/investor/selskoe-i-vodnoe-hozyajstvo/">Қишлоқ ва сув хўжалиги</a></li>
-</ul>
-</li>
-<li id="menu-item-702" class="menu-item menu-item-type-taxonomy menu-item-object-investor-taxonomy menu-item-702"><a href="https://invest.gov.uz/uz/investor-taxonomy/putevoditel/">Қўлланма</a></li>
-<li id="menu-item-703" class="menu-item menu-item-type-taxonomy menu-item-object-investor-taxonomy menu-item-703"><a href="https://invest.gov.uz/uz/investor-taxonomy/visas/">Виза масалалари</a></li>
-<li id="menu-item-704" class="menu-item menu-item-type-taxonomy menu-item-object-investor-taxonomy menu-item-704"><a href="https://invest.gov.uz/uz/investor-taxonomy/free-zones/">ЭИЗ ва КСЗ</a></li>
-<li id="menu-item-1234" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1234"><a href="http://invest.gov.uz/uz/investor/pustuyushhie-zdaniya/">Бўш турган бинолар</a></li>
-<li id="menu-item-706" class="menu-item menu-item-type-taxonomy menu-item-object-investor-taxonomy menu-item-706"><a href="https://invest.gov.uz/uz/investor-taxonomy/benchmark/">Ўзбекистонни таққослаш</a></li>
-<li id="menu-item-1540" class="menu-item menu-item-type-taxonomy menu-item-object-investor-taxonomy menu-item-has-children menu-item-1540"><a href="https://invest.gov.uz/uz/investor-taxonomy/map/">Интерактив хариталар</a>
-<ul class="sub-menu">
-	<li id="menu-item-1541" class="menu-item menu-item-type-taxonomy menu-item-object-investor-taxonomy menu-item-1541"><a href="https://invest.gov.uz/uz/investor-taxonomy/regionalnaya-karta/">Ҳудудий харита</a></li>
-	<li id="menu-item-1542" class="menu-item menu-item-type-taxonomy menu-item-object-investor-taxonomy menu-item-1542"><a href="https://invest.gov.uz/uz/investor-taxonomy/invstitsionnaya-karta/">Инвестициялар харитаси</a></li>
-</ul>
-</li>
-<li id="menu-item-1943" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1943"><a href="http://invest.gov.uz/uz/investor-taxonomy/realizuemye-investitsionnye-proekty/">Амалга оширилаётган инвестиция лойиҳалари</a></li>
-<li id="menu-item-3835" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3835"><a href="http://invest.gov.uz/uz/investor/perechen-realizuemyh-investitsionnyh-proektov/">Инвестицион лойиҳаларнинг амалга оширилиши бўйича маълумотлар базаси</a></li>
-<li id="menu-item-708" class="menu-item menu-item-type-taxonomy menu-item-object-investor-taxonomy menu-item-708"><a href="https://invest.gov.uz/uz/investor-taxonomy/survey/">Инвесторнинг онлайн сўровномаси</a></li>
-<li id="menu-item-709" class="menu-item menu-item-type-taxonomy menu-item-object-investor-taxonomy menu-item-709"><a href="https://invest.gov.uz/uz/investor-taxonomy/benefits/">Хорижий инвесторлар учун имтиёз ва преференциялар</a></li>
-<li id="menu-item-985" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-985"><a href="http://invest.gov.uz/uz/investor/hamkorbank/">Хорижий кредит линиялари</a></li>
-<li id="menu-item-11927" class="menu-item menu-item-type-post_type menu-item-object-investor menu-item-11927"><a href="https://invest.gov.uz/uz/investor/general-system-of-preferences-gsp/">»Преференциялар бош тизими» (GSP+)</a></li>
-</ul>                    </div>
-                    <div class="site-map-item">
-                        <ul id="menu-investorfor" class=""><li id="menu-item-694" class="menu-item menu-item-type-taxonomy menu-item-object-investor_for-taxonomy menu-item-694"><a href="https://invest.gov.uz/uz/investor_for-taxonomy/countries/">Ўзбекистон билан қизиқаётган мамлакатлар</a></li>
-<li id="menu-item-695" class="menu-item menu-item-type-taxonomy menu-item-object-investor_for-taxonomy menu-item-695"><a href="https://invest.gov.uz/uz/investor_for-taxonomy/reestr-meropriyatij/">Тадбирлар реестри</a></li>
-<li id="menu-item-696" class="menu-item menu-item-type-taxonomy menu-item-object-investor_for-taxonomy menu-item-696"><a href="https://invest.gov.uz/uz/investor_for-taxonomy/apply/">Инвестиция таклифини онлайн бериш</a></li>
-<li id="menu-item-697" class="menu-item menu-item-type-taxonomy menu-item-object-investor_for-taxonomy menu-item-697"><a href="https://invest.gov.uz/uz/investor_for-taxonomy/files/">Методологик қўлланмалар</a></li>
-<li id="menu-item-3752" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3752"><a href="http://invest.gov.uz/uz/investor_for-taxonomy/kreditnyj-supermarket/">Кредитга ихтисослаштирилган савдо маркази</a></li>
-</ul>                    </div>
-                    <div class="site-map-item">
-                        <ul>
-                            <li>
-                                <a href="https://invest.gov.uz/uz/region-map/">
-                                    Ҳудудий харита                                </a>
-                            </li>
-                            <li>
-                                <a href="https://invest.gov.uz/uz/regionalnaya-karta/">
-                                    Инвестициялар харитаси                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="site-map-item">
-                        <ul id="menu-about" class=""><li id="menu-item-715" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-715"><a href="https://invest.gov.uz/uz/about-cometee/our-mission/">Агентликнинг мақсад ва вазифалари</a></li>
-<li id="menu-item-14198" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14198"><a href="https://invest.gov.uz/uz/single-window/">Ягона дарча</a></li>
-<li id="menu-item-714" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-714"><a href="https://invest.gov.uz/uz/about-cometee/our-structure/">Агентлик тузилмаси</a></li>
-<li id="menu-item-713" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-713"><a href="https://invest.gov.uz/uz/about-cometee/our-partners/">Агентлик ҳамкорлари</a>
-<ul class="sub-menu">
-	<li id="menu-item-735" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-735"><a href="https://invest.gov.uz/uz/category/partnery/foreign-partners/">Хорижий шериклар</a></li>
-	<li id="menu-item-736" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-736"><a href="https://invest.gov.uz/uz/category/partnery/native-organizations/">Маҳаллий ташкилотлар</a></li>
-	<li id="menu-item-1157" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1157"><a href="https://invest.gov.uz/uz/category/partnery/partnyory-mfi/">Халқаро молия институтлари</a></li>
-</ul>
-</li>
-<li id="menu-item-712" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-712"><a href="https://invest.gov.uz/uz/about-cometee/our-ceo/">Раҳбарият</a></li>
-<li id="menu-item-4683" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4683"><a href="https://invest.gov.uz/uz/about-cometee/vacancies/">Бўш иш ўрни</a></li>
-<li id="menu-item-4912" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4912"><a href="https://invest.gov.uz/uz/about-cometee/faq/">Тез-тез берилаётган саволлар</a></li>
-<li id="menu-item-5356" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-5356"><a href="https://invest.gov.uz/uz/about-cometee/russkij-protivodejstvie-korruptsii/">Коррупцияга қарши курашиш</a>
-<ul class="sub-menu">
-	<li id="menu-item-10991" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10991"><a href="https://invest.gov.uz/uz/about-cometee/russkij-normativno-pravovye-akty-kasatelno-protivodejstvie-korruptsii/">Коррупцияга қарши курашишга оид норматив-ҳуқуқий ҳужжатлар рўйхати</a></li>
-</ul>
-</li>
-<li id="menu-item-15098" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15098"><a href="https://invest.gov.uz/uz/about-cometee/guarantees-of-equal-rights-and-opportunities-for-women-and-men/">Аёллар ва эркаклар учун тенг ҳуқуқ ҳамда имкониятлар кафолатлари</a></li>
-<li id="menu-item-6078" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6078"><a href="https://invest.gov.uz/uz/about-cometee/agency-cost-items/">Агентлик харажатлари моддалари</a></li>
-</ul>                    </div>
-                    <div class="site-map-item">
-                        <ul id="menu-media" class=""><li id="menu-item-5078" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-5078"><a href="https://invest.gov.uz/uz/category/mediacenter/news/">Янгилик ва воқеалар</a></li>
-<li id="menu-item-5079" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-5079"><a href="https://invest.gov.uz/uz/category/mediacenter/otkrytye-dannye/">Очиқ маълумотлар</a></li>
-<li id="menu-item-5080" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-5080"><a href="https://invest.gov.uz/uz/category/mediacenter/videogalereya/">Видеогалерея</a></li>
-<li id="menu-item-5083" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-5083"><a href="https://invest.gov.uz/uz/category/mediacenter/publikatsii/">Медиа материаллар</a>
-<ul class="sub-menu">
-	<li id="menu-item-6150" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-6150"><a href="https://invest.gov.uz/uz/mediacenter/publikatsii/brochure/">Брошюра, Флаер</a></li>
-	<li id="menu-item-6149" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-6149"><a href="https://invest.gov.uz/uz/mediacenter/publikatsii/leaflet/">Лифлет</a></li>
-	<li id="menu-item-6148" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-6148"><a href="https://invest.gov.uz/uz/mediacenter/publikatsii/presentations/">Тақдимотлар</a></li>
-	<li id="menu-item-11198" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-11198"><a href="https://invest.gov.uz/uz/mediacenter/publikatsii/guide-for-investor/">Инвестор учун қўлланма</a></li>
-	<li id="menu-item-14892" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-14892"><a href="https://invest.gov.uz/uz/mediacenter/publikatsii/magazine/">Журнал</a></li>
-</ul>
-</li>
-</ul>                    </div>
-                    <div class="site-map-item"></div>
-                </div>
-            </div>
-        </div>
-    </div>
 </div>
 
 
-<link rel="stylesheet" id="su-icons-css" href="./invest.gov.uz_files/icons.css" type="text/css" media="all">
-<link rel="stylesheet" id="su-shortcodes-css" href="./invest.gov.uz_files/shortcodes(1).css" type="text/css" media="all">
-<script type="text/javascript" src="./invest.gov.uz_files/wp-polyfill.min.js.download" id="wp-polyfill-js"></script>
-<script type="text/javascript" id="wp-polyfill-js-after">
-( 'fetch' in window ) || document.write( '<script src="https://invest.gov.uz/wp-includes/js/dist/vendor/wp-polyfill-fetch.min.js?ver=3.0.0"></scr' + 'ipt>' );( document.contains ) || document.write( '<script src="https://invest.gov.uz/wp-includes/js/dist/vendor/wp-polyfill-node-contains.min.js?ver=3.42.0"></scr' + 'ipt>' );( window.DOMRect ) || document.write( '<script src="https://invest.gov.uz/wp-includes/js/dist/vendor/wp-polyfill-dom-rect.min.js?ver=3.42.0"></scr' + 'ipt>' );( window.URL && window.URL.prototype && window.URLSearchParams ) || document.write( '<script src="https://invest.gov.uz/wp-includes/js/dist/vendor/wp-polyfill-url.min.js?ver=3.6.4"></scr' + 'ipt>' );( window.FormData && window.FormData.prototype.keys ) || document.write( '<script src="https://invest.gov.uz/wp-includes/js/dist/vendor/wp-polyfill-formdata.min.js?ver=3.0.12"></scr' + 'ipt>' );( Element.prototype.matches && Element.prototype.closest ) || document.write( '<script src="https://invest.gov.uz/wp-includes/js/dist/vendor/wp-polyfill-element-closest.min.js?ver=2.0.2"></scr' + 'ipt>' );
-</script>
-<script type="text/javascript" id="contact-form-7-js-extra">
-/* <![CDATA[ */
-var wpcf7 = {"api":{"root":"https:\/\/invest.gov.uz\/uz\/wp-json\/","namespace":"contact-form-7\/v1"},"cached":"1"};
-/* ]]> */
-</script>
-<script type="text/javascript" src="./invest.gov.uz_files/index.js.download" id="contact-form-7-js"></script>
-<script type="text/javascript" id="wp-polls-js-extra">
-/* <![CDATA[ */
-var pollsL10n = {"ajax_url":"https:\/\/invest.gov.uz\/wp-admin\/admin-ajax.php","text_wait":"Your last request is still being processed. Please wait a while ...","text_valid":"Please choose a valid poll answer.","text_multiple":"Maximum number of choices allowed: ","show_loading":"1","show_fading":"1"};
-/* ]]> */
-</script>
-<script type="text/javascript" src="./invest.gov.uz_files/polls-js.js.download" id="wp-polls-js"></script>
-<script type="text/javascript" src="./invest.gov.uz_files/api.js.download" id="google-recaptcha-js"></script>
-<script type="text/javascript" id="wpcf7-recaptcha-js-extra">
-/* <![CDATA[ */
-var wpcf7_recaptcha = {"sitekey":"6LeFgMgUAAAAAIwJ2jFYEsxFLW8Bems92IXBx3zj","actions":{"homepage":"homepage","contactform":"contactform"}};
-/* ]]> */
-</script>
-<script type="text/javascript" src="./invest.gov.uz_files/index.js(1).download" id="wpcf7-recaptcha-js"></script>
-<script type="text/javascript" src="./invest.gov.uz_files/responsivevoice.min.js.download" id="bvi-responsivevoice-js-js"></script>
-<script type="text/javascript" src="./invest.gov.uz_files/js.cookie.min.js.download" id="bvi-cookie-js"></script>
-<script type="text/javascript" id="bvi-init-js-extra">
-/* <![CDATA[ */
-var bvi_init = {"bvi_init_setting":{"bvi_theme":"white","bvi_font":"arial","bvi_font_size":16,"bvi_letter_spacing":"normal","bvi_line_height":"normal","bvi_images":"grayscale","bvi_reload":false,"bvi_fixed":true,"bvi_voice":false,"bvi_flash_iframe":true,"bvi_hide":false}};
-/* ]]> */
-</script>
-<script type="text/javascript" src="./invest.gov.uz_files/bvi-init.js.download" id="bvi-init-js"></script>
-<script type="text/javascript" src="./invest.gov.uz_files/bvi.min.js.download" id="bvi-js-js"></script>
-<script type="text/javascript" src="./invest.gov.uz_files/wp-embed.min.js.download" id="wp-embed-js"></script>
-<script type="text/javascript" id="su-shortcodes-js-extra">
-/* <![CDATA[ */
-var SUShortcodesL10n = {"noPreview":"\u042d\u0442\u043e\u0442 \u0448\u043e\u0440\u0442\u043a\u043e\u0434 \u043d\u0435 \u0440\u0430\u0431\u043e\u0442\u0430\u0435\u0442 \u0432 \u0440\u0435\u0436\u0438\u043c\u0435 \u043f\u0440\u0435\u0434\u043f\u0440\u043e\u0441\u043c\u043e\u0442\u0440\u0430. \u041f\u043e\u0436\u0430\u043b\u0443\u0439\u0441\u0442\u0430 \u0432\u0441\u0442\u0430\u0432\u044c\u0442\u0435 \u0448\u043e\u0440\u0442\u043a\u043e\u0434 \u0432 \u0440\u0435\u0434\u0430\u043a\u0442\u043e\u0440 \u0438 \u043f\u043e\u0441\u043c\u043e\u0442\u0440\u0438\u0442\u0435 \u0440\u0435\u0437\u0443\u043b\u044c\u0442\u0430\u0442 \u043d\u0430 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435 \u0437\u0430\u043f\u0438\u0441\u0438.","magnificPopup":{"close":"\u0417\u0430\u043a\u0440\u044b\u0442\u044c (Esc)","loading":"\u0417\u0430\u0433\u0440\u0443\u0437\u043a\u0430...","prev":"\u041d\u0430\u0437\u0430\u0434 (\u041a\u043b\u0430\u0432\u0438\u0448\u0430 \u0412\u043b\u0435\u0432\u043e)","next":"\u0412\u043f\u0435\u0440\u0435\u0434 (\u041a\u043b\u0430\u0432\u0438\u0448\u0430 \u0412\u043f\u0440\u0430\u0432\u043e)","counter":"%curr% \u0438\u0437 %total%","error":"Failed to load content.. <a href=\"0rl target=\"_blank\"><u>\/u><\/a>"}};
-/* ]]> */
-</script>
-<script type="text/javascript" src="./invest.gov.uz_files/index.js(2).download" id="su-shortcodes-js"></script>
-
-
-<!-- Start of LiveChat (www.livechat.com) code -->
-<!-- <script>
-    window.__lc = window.__lc || {};
-    window.__lc.license = 14021565;
-    ;(function(n,t,c){function i(n){return e._h?e._h.apply(null,n):e._q.push(n)}var e={_q:[],_h:null,_v:"2.0",on:function(){i(["on",c.call(arguments)])},once:function(){i(["once",c.call(arguments)])},off:function(){i(["off",c.call(arguments)])},get:function(){if(!e._h)throw new Error("[LiveChatWidget] You can't use getters before load.");return i(["get",c.call(arguments)])},call:function(){i(["call",c.call(arguments)])},init:function(){var n=t.createElement("script");n.async=!0,n.type="text/javascript",n.src="https://cdn.livechatinc.com/tracking.js",t.head.appendChild(n)}};!n.__lc.asyncInit&&e.init(),n.LiveChatWidget=n.LiveChatWidget||e}(window,document,[].slice))
-</script>
-<noscript><a href="https://www.livechat.com/chat-with/14021565/" rel="nofollow">Chat with us</a>, powered by <a href="https://www.livechat.com/?welcome" rel="noopener nofollow" target="_blank">LiveChat</a></noscript>
- -->
-
-<!-- End of LiveChat code -->
-
-
-
-<!-- <script src="//code-eu1.jivosite.com/widget/MRWfykJYV1" async></script> -->
-<!-- BEGIN JIVOSITE CODE {literal} -->
-<!-- <script type='text/javascript'>
-    (function(){ var widget_id = 'Pq9I2f7xWm';var d=document;var w=window;function l(){var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true;s.src = '//code.jivosite.com/script/widget/'+widget_id; var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(s, ss);}if(d.readyState=='complete'){l();}else{if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
-</script> -->
-<!-- {/literal} END JIVOSITE CODE -->
-
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async="" src="./invest.gov.uz_files/js"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'UA-130506499-1');
-</script>
-
-<!-- Yandex.Metrika counter -->
-<script type="text/javascript">
-    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-        m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym")
-
-    ym(51460970, "init", {
-        id:51460970,
-        clickmap:true,
-        trackLinks:true,
-        accurateTrackBounce:true,
-        webvisor:true
-    });
-</script>
-
-<noscript><div><img src="https://mc.yandex.ru/watch/51460970" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- /Yandex.Metrika counter -->
-<script type="text/javascript" src="./invest.gov.uz_files/fancybox.min.js.download"></script>
-
-<script>
-window.replainSettings = { id: 'bc1415bc-bedb-443b-a5f0-4cf2377f27ae' };
-(function(u){var s=document.createElement('script');s.async=true;s.src=u;
-var x=document.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);
-})('https://widget.replain.cc/dist/client.js');
-</script>
-
-
-
-
-
-
-<div><div>Could not connect to the reCAPTCHA service. Please check your internet connection and reload to get a reCAPTCHA challenge.</div></div><div id="__replain_widget" style="position: fixed; inset: auto 20px 20px auto; width: 70px; height: 70px; z-index: 2147000000; background-color: transparent; border: none !important;"><iframe id="__replain_widget_iframe" title="__replain_widget_iframe" name="__replain_widget_iframe" src="./invest.gov.uz_files/saved_resource.html" scrolling="no" frameborder="0" allowfullscreen="" style="display: block !important; visibility: visible !important; background: none transparent !important; opacity: 1 !important; overflow: visible !important; position: absolute !important; left: 0px !important; top: 0px !important; width: 100% !important; min-width: auto !important; max-width: 100vw !important; height: 100% !important; min-height: auto !important; max-height: 100% !important; z-index: 2147000000 !important; transition: none 0s ease 0s !important; margin: 0px !important; padding: 0px !important; border: none !important;"></iframe></div></body></html>
+</body>
+</html>
