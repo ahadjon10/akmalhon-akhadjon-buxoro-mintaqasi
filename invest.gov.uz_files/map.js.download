@@ -1,0 +1,16 @@
+$(document).ready(function(){
+	$(".map-navigation-terms li").click(function(){
+		el = $(this);
+		el.toggleClass("active");
+		return false;
+	});
+
+    $(".map3__sidebar-item").click(function(){
+        el = $(this);
+        el.toggleClass("active");
+        id = $(this).data("id");
+        $(".map3-item.thumb[data-id='"+id+"']").toggleClass("active");
+        return false;
+    });
+
+});

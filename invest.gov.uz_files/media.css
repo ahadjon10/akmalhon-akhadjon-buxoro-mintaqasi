@@ -1,0 +1,107 @@
+
+
+@media screen and (max-width: 992px) {
+    .site-map-inner {
+        padding: 0;
+    }
+    .site-map-item, .site-map-main > ul > li {
+        width: 100%;
+    }
+    .site-map .search-wrapper-item {
+        padding-left: 0;
+    }
+    .invest-intro-text {
+        padding: 0;
+    }
+    .main-characteristics .row {
+        justify-content: center;
+    }
+    .map svg {
+        width: 100%!important;
+        height: auto;
+    }
+    .map-item {
+        position: relative;
+        margin-bottom: 40px;
+    }
+    .home-new-item.single .home-new-thumbnail img {
+        object-fit: none;
+        margin-bottom: 0;
+    }
+    .footer-banner, #menu-footermenu {
+        display: none;
+    }
+    .footer-social {
+        object-fit: contain;
+        margin-bottom: 25px;
+    }
+    .banner-image img {
+        height: 250px;
+    }
+    .home-new-item {
+        margin-bottom: 20px;
+    }
+    .home-new-thumbnail {
+        margin: 10px 0;
+    }
+    .poscallcenter a {
+        display: none!important;
+    }
+    .header-nav {
+        top: 10px;
+        z-index: 20;
+    }
+    .header-items > div {
+        text-align: right;
+    }
+    .menu {
+        display: none;
+    }
+    div.logo2 {
+        display: block;
+    }
+    div.logo2 img {
+        display: block;
+        padding-left: 40px;
+    }
+
+    .content-item-thumbnail img {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .header-nav {
+        top: 2px;
+    }
+        .content-item-thumbnail img {
+            width: 100%;
+        }
+    body.post-type-archive-investor_for .content-item-title, body.post-type-archive-investor .content-item-title, body.archive.term-27 .content-item-title {
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 1630px) {
+    #banner_reklama1 {
+        display: block !important;
+    }
+    #banner_reklama2 {
+        display: none;
+    }
+}
+
+.ostavit-kontakti input{
+    border-width:1px;
+    border-style:inset;
+    padding: 4px;
+}
+.ostavit-kontakti p{
+    margin-top: 10px;
+}
+.ostavit-kontakti input.wpcf7-submit{
+    background-color: #357ac5;
+    padding: 6px;
+    margin-top: 8px;
+    color: #fff;
+}
